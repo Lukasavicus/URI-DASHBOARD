@@ -49,7 +49,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'uri_dashboard.urls'
+#ROOT_URLCONF = 'uri_dashboard.urls'
+ROOT_URLCONF = 'uri_dashboard.uri_dashboard.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +68,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'uri_dashboard.wsgi.application'
+#WSGI_APPLICATION = 'uri_dashboard.wsgi.application'
+WSGI_APPLICATION = 'uri_dashboard.uri_dashboard.wsgi.application'
 
 
 # Database
