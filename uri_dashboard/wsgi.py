@@ -12,7 +12,7 @@ import os
 from django.conf import settings
 from django.core.wsgi import get_wsgi_application
 
-#os.environ.setdefault("DJANGO_SETTINGS_MODULE", "uri_dashboard.settings")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "uri_dashboard.uri_dashboard.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "uri_dashboard.settings")
+#os.environ.setdefault("DJANGO_SETTINGS_MODULE", "uri_dashboard.uri_dashboard.settings")
 
 application = get_wsgi_application()

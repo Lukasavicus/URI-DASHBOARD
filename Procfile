@@ -1,1 +1,1 @@
-web: gunicorn uri_dashboard.uri_dashboard.wsgi --log-file -
+web: gunicorn uri_dashboard.wsgi --log-file -
