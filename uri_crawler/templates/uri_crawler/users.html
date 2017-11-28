@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>URI DASHBOARD</title>
+</head>
+<body>
+	<h3> Possibles matches for your search </h3>
+	{% if msg %}
+		<h5>{{ msg }}</h5>
+	{% endif %}
+	{% if num_pages %}
+		<h5>{{ num_pages }}</h5>
+	{% endif %}
+	<table>
+		{% if possible_users %}
+			{% for possible_user in possible_users %}
+				<tr>
+					<td>
+				        <li><a href="{% possible_users[possible_user] %}">{{ possible_users[possible_user][0] }}</a></li>
+					</td>
+				</tr>
+			{% endfor %}
+		{% else %}
+			<p>No results for your search.</p>
+		{% endif %}
+	</table>
+</body>
+</html>

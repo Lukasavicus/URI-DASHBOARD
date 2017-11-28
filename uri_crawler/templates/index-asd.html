@@ -1,0 +1,9 @@
+{% if PROBLEMS %}
+    <ul>
+    {% for problem in PROBLEMS %}
+        <li><a href="#">{{ problem.id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No problems are available.</p>
+{% endif %}

@@ -25,12 +25,13 @@ SECRET_KEY = 'j(*645n&d4xc)#kcz6j$&$07gw8u%t_d66le6!svc2fnjcae34'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["rocky-everglades-40647.herokuapp.com"]
+ALLOWED_HOSTS = ["rocky-everglades-40647.herokuapp.com", u"localhost"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'uri_crawler.apps.UriCrawlerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

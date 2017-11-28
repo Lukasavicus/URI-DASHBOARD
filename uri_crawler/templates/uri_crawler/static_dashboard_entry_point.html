@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>URI Dashboard</title>
+</head>
+<body>
+	<form action="{% url 'uri_crawler:search_me' question.id %}" method="post">
+	{% csrf_token %}
+	    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+	    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+	<input type="submit" value="Vote" />
+	</form>
+</body>
+</html>
