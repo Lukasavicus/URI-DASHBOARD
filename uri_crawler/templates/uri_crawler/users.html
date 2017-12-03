@@ -5,24 +5,25 @@
 </head>
 <body>
 	<h3> Possibles matches for your search </h3>
-	{% if msg %}
-		<h5>{{ msg }}</h5>
-	{% endif %}
-	{% if num_pages %}
-		<h5>{{ num_pages }}</h5>
-	{% endif %}
 	<table>
 		{% if possible_users %}
-			{% for possible_user in possible_users %}
+			{% for pb_user in possible_users %}
 				<tr>
 					<td>
-				        <li><a href="{% possible_users[possible_user] %}">{{ possible_users[possible_user][0] }}</a></li>
+				        <li><a href="{{ pb_user.id }}">{{ pb_user.name }}</a></li>
 					</td>
 				</tr>
 			{% endfor %}
 		{% else %}
 			<p>No results for your search.</p>
 		{% endif %}
+		<form action="../search_user_adv/" method="post">
+		{% csrf_token %}
+		    <input type="hidden" name="username" id="username" value="{{ search_key }}"/>
+		    <input type="hidden" name="number" value="{{ num_pages }}">
+		<input type="submit" />
+		</form>
 	</table>
+	<a href="../" type="button"> Voltar </a>
 </body>
 </html>

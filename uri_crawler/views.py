@@ -27,16 +27,29 @@ from crawler_provider.ws_users_data import craw_users
 #		return craw_problems()
 
 def index(request):
-	#PROBLEMS = craw_problems()
-	#context = {'PROBLEMS' : PROBLEMS}
 	address = 'uri_crawler/index.html'
 	return render(request, address, {})
 
 def search_user(request):
 	username = request.POST.get("username")
 	print(username)
-	POSSIBLE_USERS = craw_users(username, 10)
-	context = {'possible_users' : POSSIBLE_USERS, 'msg' : "MERDA"}
-	#context = {'msg' : "MERDA", 'num_pages': POSSIBLE_USERS} 
+	num_pages = 10
+	POSSIBLE_USERS = craw_users(username, num_pages)
+	context = {'possible_users' : POSSIBLE_USERS, 'num_pages' : num_pages, 'search_key' : username}
 	address = 'uri_crawler/users.html'
+	return render(request, address, context)
+
+def search_user_advanced(request):
+	username = request.POST.get("username")
+	number = request.POST.get("number")
+	print(number)
+	num_pages = int(number) * 10
+	POSSIBLE_USERS = craw_users(username, num_pages)
+	context = {'possible_users' : POSSIBLE_USERS, 'num_pages' : num_pages, 'search_key' : username}
+	address = 'uri_crawler/users.html'
+	return render(request, address, context)
+
+def user_detail(request):
+	context = {}
+	address = 'uri_crawler/user_detail.html'
 	return render(request, address, context)

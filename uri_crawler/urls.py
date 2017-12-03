@@ -23,6 +23,8 @@ app_name = 'uri_crawler'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^search_user/$', views.search_user, name='search_user'),
+    url(r'^search_user_adv/$', views.search_user_advanced, name='search_user_advanced'),
+    url(r'^search_user/[0-9]+/$', views.user_detail, name='user_detail'),
 
     #url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
     #url(r'^$', views.IndexView.as_view(), name='index'),

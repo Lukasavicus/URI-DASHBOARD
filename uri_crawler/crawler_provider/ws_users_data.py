@@ -97,5 +97,5 @@ def craw_users(username, limit=100):
                 print(str(identifier) + "\t" +  name + "\t" + str(d))
 
     #return list_of_names (w/ probabilities)
-    #sorted(USERS, key=lambda x : USERS[x][1], reverse=True)
-    return USERS
+    SORTED_USERS = sorted(USERS, key=lambda x : x['dist'], reverse=True)
+    return SORTED_USERS
