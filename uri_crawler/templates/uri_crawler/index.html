@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>URI DASHBOARD</title>
+</head>
+<body>
+	<h1> URI DASHBOARD </h1>
+	<form action="search_user/" method="post">
+	{% csrf_token %}
+	    <input type="text" name="username" id="username" />
+	<input type="submit" />
+	</form>
+</body>
+</html>
