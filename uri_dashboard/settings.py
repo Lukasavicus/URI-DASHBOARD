@@ -25,7 +25,8 @@ SECRET_KEY = 'j(*645n&d4xc)#kcz6j$&$07gw8u%t_d66le6!svc2fnjcae34'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["rocky-everglades-40647.herokuapp.com", u"localhost", "ec2-54-221-204-213.compute-1.amazonaws.com"]
+#ALLOWED_HOSTS = ["rocky-everglades-40647.herokuapp.com", u"localhost", "ec2-54-221-204-213.compute-1.amazonaws.com"]
+ALLOWED_HOSTS = ["rocky-everglades-40647.herokuapp.com", u"localhost"]
 
 
 # Application definition
