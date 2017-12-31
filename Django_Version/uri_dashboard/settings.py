@@ -77,24 +77,62 @@ WSGI_APPLICATION = 'uri_dashboard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-#DATABASES = {
+# Default Configurations
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
-#}
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'URI_DASH',
+#         'USER': 'root',
+#         'PASSWORD': 's400',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6a11n092sf80g',
-        'USER': 'dxcrtveovoefac',
-        'PASSWORD': 'be0e8ceea61894bdb087e9e2aa30db94246796f9ed8d11e13a9b887ca6bd4fe6',
-        'HOST': 'ec2-54-221-204-213.compute-1.amazonaws.com',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '2100436_devdb',
+        'USER': '2100436_devdb',
+        'PASSWORD': 'Lukas123biz',
+        'HOST': '185.176.40.25',   
+        'PORT': '3306',
     }
 }
 
+
+
+# Configuration of remote database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd6a11n092sf80g',
+#         'USER': 'dxcrtveovoefac',
+#         'PASSWORD': 'be0e8ceea61894bdb087e9e2aa30db94246796f9ed8d11e13a9b887ca6bd4fe6',
+#         'HOST': 'ec2-54-221-204-213.compute-1.amazonaws.com',
+#         'PORT': '',
+#     }
+# }
+
+# Configuration of local database
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'myproject',
+#         'USER': 'myprojectuser',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

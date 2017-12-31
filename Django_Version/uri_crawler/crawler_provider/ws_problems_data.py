@@ -28,7 +28,6 @@ def craw_problems():
     PROBLEMS = []
     print("craw_problems()")
     num_pages = get_num_pages();
-    num_pages = 3
     for i in range(1,num_pages+1):
         print("Checking page: " + str(i) + ".. of " + str(num_pages))
         page_idx_address = PROBLEMS_MODULE_ADDRESS + "?page=" + str(i)

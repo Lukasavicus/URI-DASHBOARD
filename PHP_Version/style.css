@@ -1,0 +1,63 @@
+.radar_container{
+	display: block;
+	width:100%;
+	height: 50%
+}
+
+.radar_component{
+	width: 100%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+table {
+	table-layout:fixed
+}
+
+.btn_green_aqua {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(38,176,146,0.6);
+}
+
+.btn_orange {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(240,150,20,0.6);
+}
+
+.btn_green {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(90,155,57,0.6);
+}
+
+.btn_red {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(231,77,70,0.6);
+}
+
+.btn_grey {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(127,120,101,0.6);
+}
+
+.btn_purple {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(145,89,167,0.6);
+}
+
+.btn_pink {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(229,118,161,0.6);
+}
+
+.btn_black_navy {
+	width: 30px;
+	height: 30px;
+	background-color:rgba(51,61,70,0.6);
+}
