@@ -28,6 +28,7 @@
 		$num_pages = get_num_pages_user($user_id);
 		for($i = 1; $i <= $num_pages; $i++){
 			//print_r("Checking page: " . $i . ".. of " . $num_pages . "<br>");
+			//print_r(USER_MODULE_ADDRESS . "$user_id?page=" . $i);
 			$page_idx_address = (USER_MODULE_ADDRESS . "$user_id?page=" . $i);
 
 			$doc = new DomDocument;
@@ -36,6 +37,8 @@
 
 			$table = $doc->getElementsByTagName('table')[0];
 
+			//var_dump($table);
+			
 			$registers = $table->getElementsByTagName('tr');
 
 			foreach ($registers as $reg) {
@@ -54,6 +57,7 @@
 				$SUBS["date"] = $submission_date;
 
 				$PROBLEMS_SOLVED_BY_USER[$prob_id] = $SUBS;
+				//print_r($SUBS);
 
 				//array_push($PROBLEMS_SOLVED_BY_USER, $SUBS);
 			}

@@ -39,27 +39,28 @@
 			foreach ($registers as $reg) {
 				$data = $reg->getElementsByTagName('td');
 
-				$id = str_replace(' ', '', $data[0]->nodeValue); // problem_id
-				$name = trim($data[2]->nodeValue); // problem_name
-				$category_text = trim($data[3]->nodeValue); // problem_category
-				$solved_by_x_users = str_replace(' ', '',$data[4]->nodeValue); // problem_solved_times
-				$level = str_replace(' ', '',$data[5]->nodeValue); // problem_level
+				if ($data != NULL){
+					$id = trim($data[0]->nodeValue); // problem_id
+					$name = trim($data[2]->nodeValue); // problem_name
+					$category_text = trim($data[3]->nodeValue); // problem_category
+					$solved_by_x_users = trim($data[4]->nodeValue); // problem_solved_times
+					$level = trim($data[5]->nodeValue); // problem_level
 
-				//echo "->" . $category_text . "<-";
+					//echo "->" . $category_text . "<-";
 
-				$categories = ["Iniciante", "Ad-Hoc", "Strings", "Estruturas e Bibliotecas", "Matemática", "Paradigmas", "Grafos", "Geometria Computacional", "SQL"];
+					$categories = ["Iniciante", "Ad-Hoc", "Strings", "Estruturas e Bibliotecas", "Matemática", "Paradigmas", "Grafos", "Geometria Computacional", "SQL"];
 
-				//$category  = array_search($category_text, $categories) - 1;
+					//$category  = array_search($category_text, $categories) - 1;
 
-				$PROB["id"] = $id;
-				$PROB["name"] = $name;
-				$PROB["category"] = $category_text;
-				$PROB["solved"] = $solved_by_x_users;
-				$PROB["level"] = $level;
+					$PROB["id"] = $id;
+					$PROB["name"] = $name;
+					$PROB["category"] = $category_text;
+					$PROB["solved"] = $solved_by_x_users;
+					$PROB["level"] = $level;
 
-				$PROBLEMS[$id] = $PROB;
-
-				//array_push($PROBLEMS, $PROB);
+					$PROBLEMS[$id] = $PROB;
+					//array_push($PROBLEMS, $PROB);
+				}
 			}
 		}
 

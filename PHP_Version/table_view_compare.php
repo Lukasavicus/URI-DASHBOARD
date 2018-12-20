@@ -2,7 +2,7 @@
 
 	//var_dump($_POST);
 
-	include_once 'transform_data.php';
+	include_once 'cross_data.php';
 
 	// ====================================================================================
 
@@ -168,8 +168,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-	<script src="./chart1.js"></script>
-	<link rel="stylesheet" href="style.css">
+	<script src="./public/chart1.js"></script>
+	<link rel="stylesheet" href="./public/style.css">
 </head>
 <body>
 	<input type="text" name="user_id_one" readonly="true" value="<?= $user_id_one ?>">
@@ -229,6 +229,6 @@
 		var COLOR1 = "<?= $_POST['user_color_one'] ?>";
 		var COLOR2 = "<?= $_POST['user_color_two'] ?>";
 	</script>
-	<script type="text/javascript" src="table_view_compare_action.js"></script>
+	<script type="text/javascript" src="./public/table_view_compare_action.js"></script>
 </body>
 </html>

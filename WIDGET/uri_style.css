@@ -1,0 +1,29 @@
+.superior_half {
+    border: thin solid #c7251f;
+    background: #FFF;
+}
+.inferior_half {
+    border: thin solid #c7251f;
+    background: repeating-linear-gradient(-25deg, #c7251f, #c7251f 2.5px, #fb5b67 2.5px, #fb5b67 5px); /* #c7251f - #e14043 - fb5b67 */
+}
+
+.inner_circle {
+    border: 4px double #c7251f;
+    background: #FFF;
+}
+
+.left_superior_text,font {
+    color: #c7251f;
+}
+
+.right_superior_text,font {
+    color: #c7251f;
+}
+
+.left_inferior_text,font {
+    color: #FFF;
+}
+
+.right_inferior_text,font {
+    color: #FFF;
+}

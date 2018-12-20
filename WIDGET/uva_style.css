@@ -1,0 +1,29 @@
+.superior_half {
+    border: thin solid #C31857;
+    background: #FFF;
+}
+.inferior_half {
+    border: thin solid #C31857;
+    background: #C31857;
+}
+
+.inner_circle {
+    border: 4px double #C31857;
+    background: #FFF;
+}
+
+.left_superior_text,font {
+    color: #C31857;
+}
+
+.right_superior_text,font {
+    color: #C31857;
+}
+
+.left_inferior_text,font {
+    color: #FFF;
+}
+
+.right_inferior_text,font {
+    color: #FFF;
+}

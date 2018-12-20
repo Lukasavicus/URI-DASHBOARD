@@ -1,0 +1,121 @@
+.superior_half {
+    border-radius: 15px 15px 0px 0px;
+    margin: 0px;
+    width: 300px;
+    height: 96px; 
+}
+.inferior_half {
+    border-radius: 0px 0px 15px 15px;
+    margin: 0px;
+    width: 300px;
+    height: 96px;
+}
+
+.inner_circle {
+    border-radius: 50%;
+    margin: 0px;
+    width: 60px;
+    height: 60px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.test {
+	position: relative;
+	display:inline-block
+}
+
+.left_superior_text{
+    text-align: center;
+	width: 90px;
+    height: 20px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translateY(-10%) translateX(-10%);
+}
+
+.right_superior_text{
+    text-align: center;
+	width: 90px;
+    height: 20px;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translateY(-10%) translateX(-90%);
+}
+
+.left_inferior_text{
+	text-align: center;
+	width: 90px;
+    height: 20px;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translateY(-90%) translateX(-10%);
+}
+
+.right_inferior_text{
+	text-align: center;
+	width: 90px;
+    height: 20px;
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    transform: translateY(-90%) translateX(-90%);
+}
+
+.left_superior_text,font {
+    color: #C31857;
+}
+
+.right_superior_text,font {
+    color: #C31857;
+}
+
+.left_inferior_text,font {
+    color: #FFF;
+}
+
+.right_inferior_text,font {
+    color: #FFF;
+}
+
+.tooltip {
+    
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

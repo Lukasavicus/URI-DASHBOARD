@@ -1,0 +1,4 @@
+Mudar alguns arquivos .html para apontarem para a pasta public onde tem as resources como .css e .js
+
+index.html <- Index (produção);
+index_2.html <- Index que irá submeter uma requisição ajax para transform_data (craw_problems) para retornar esses dados em json para inserir no bd do navegador

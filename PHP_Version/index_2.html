@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> URI Stats - Deeper View </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<img src="">
+		<div class="form-group row">
+			<form action="./transform_data.php" method="POST">
+				<div class="form-group">
+				    <label for="user_id">User's Id</label>
+				    <input type="text" class="form-control" name="user_id" id="user_id" aria-describedby="_user_id" placeholder="User Id: 29546">
+				    <small id="_user_id" class="form-text text-muted">Grab the visualization for my own data.</small>
+				</div>
+				<button type="reset" class="btn btn-default"> Reset </button>
+				<button type="submit" class="btn btn-primary"> Submit </button>
+			</form>
+		</div>
+		<hr>
+		<div class="form-group row">
+			<form action="./table_view_compare.php" method="POST">
+				<div class="form-group">
+				    <label for="user_id_one">User One's Id</label>
+				    <input type="text" class="form-control" name="user_id_one" id="user_id_one" aria-describedby="_user_id" placeholder="User Id: 29546">
+				    <input type="text" class="form-control" name="user_color_one" id="user_color_one" style="display:none">
+				</div>
+				<div class="form-group">
+					<label for="user_color_one">User One's Color</label>
+					<br>
+					<button id="btn_1" class="btn btn_green_aqua" type="button"></button>
+					<button id="btn_2" class="btn btn_pink" type="button"></button>
+					<button id="btn_3" class="btn btn_green" type="button"></button>
+					<button id="btn_4" class="btn btn_black_navy" type="button"></button>
+					
+				</div>
+				<br><br><br>
+				<div class="form-group">
+				    <label for="user_id_two">User Two's Id</label>
+				    <input type="text" class="form-control" name="user_id_two" id="user_id_two" aria-describedby="_user_id" placeholder="User Id: 29546">
+				    <input type="text" class="form-control" name="user_color_two" id="user_color_two" style="display:none">
+				    <small id="_user_id" class="form-text text-muted">Grab the visualization for to compare data.</small>
+				</div>
+				<div class="form-group">
+					<label for="user_color_two">User Two's Color</label>
+					<br>
+					<button id="btn_5" class="btn btn_grey" type="button"></button>
+					<button id="btn_6" class="btn btn_orange" type="button"></button>
+					<button id="btn_7" class="btn btn_purple" type="button"></button>
+					<button id="btn_8" class="btn btn_red" type="button"></button>
+				</div>
+				<button type="reset" class="btn btn-default"> Reset </button>
+				<button type="submit" class="btn btn-primary"> Submit </button>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		document.getElementById("user_id_one").style.borderColor = "#26b092";
+		document.getElementById("user_color_one").value = "#26b092";
+		document.getElementById("user_id_two").style.borderColor = "#7f7865";
+		document.getElementById("user_color_two").value = "#7f7865";
+
+		document.getElementById("btn_1").addEventListener('click', function(){
+			document.getElementById("user_id_one").style.borderColor = "#26b092";
+			document.getElementById("user_color_one").value = "#26b092";
+		});
+		
+		document.getElementById("btn_2").addEventListener('click', function(){
+			document.getElementById("user_id_one").style.borderColor = "#9159a7";
+			document.getElementById("user_color_one").value = "#9159a7";
+		});
+
+		document.getElementById("btn_3").addEventListener('click', function(){
+			document.getElementById("user_id_one").style.borderColor = "#5a9b39";
+			document.getElementById("user_color_one").value = "#5a9b39";
+		});
+
+		document.getElementById("btn_4").addEventListener('click', function(){
+			document.getElementById("user_id_one").style.borderColor = "#333d46";
+			document.getElementById("user_color_one").value = "#333d46";
+		});
+
+		document.getElementById("btn_5").addEventListener('click', function(){
+			document.getElementById("user_id_two").style.borderColor = "#7f7865";
+			document.getElementById("user_color_two").value = "#7f7865";
+		});
+
+		document.getElementById("btn_6").addEventListener('click', function(){
+			document.getElementById("user_id_two").style.borderColor = "#f09614";
+			document.getElementById("user_color_two").value = "#f09614";
+		});
+
+		document.getElementById("btn_7").addEventListener('click', function(){
+			document.getElementById("user_id_two").style.borderColor = "#e576a1";
+			document.getElementById("user_color_two").value = "#e576a1";
+		});
+
+		document.getElementById("btn_8").addEventListener('click', function(){
+			document.getElementById("user_id_two").style.borderColor = "#e74d46";
+			document.getElementById("user_color_two").value = "#e74d46";
+		});
+	</script>
+</body>
+</html>

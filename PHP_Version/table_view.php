@@ -2,7 +2,8 @@
 
 	//var_dump($_POST);
 
-	include_once 'transform_data.php';
+	include_once 'cross_data.php';
+	include_once 'ws_problems_data.php';
 
 	// ====================================================================================
 
@@ -57,12 +58,16 @@
 	//29546 - lukasavicus
 	$user_id = $_POST["user_id"];
 
+	//print_problems_to_file("problems_data.csv")
+
 	$user_data = join_data($user_id);
+	//var_dump($user_data);
 	$problems_data = crawl_problems();
 
 
 	// ====================================================================================
 		foreach($user_data as $ud){
+			print_r($ud); print_r(">"+ $ud["problem_data"]["category"] + "<"); echo "<br><br>";
 			$idx_i = $ud["problem_data"]["level"];
 			$idx_j = search_key_in_array($categories, $ud["problem_data"]["category"]);
 
@@ -70,6 +75,7 @@
 				$data_user[$idx_i][$idx_j]++;
 			}
 		}
+		var_dump($data_user);
 
 		// --------------------------------------------------------------------------------
 
@@ -127,8 +133,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-	<script src="./chart1.js"></script>
-	<link rel="stylesheet" href="style.css">
+	<script src="./public/chart1.js"></script>
+	<link rel="stylesheet" href="./public/style.css">
 </head>
 <body>
 	<input type="text" name="user_id" readonly="true" value="<?= $user_id ?>">
@@ -175,6 +181,6 @@
 		</div>
 	<!-- -->
 
-	<script type="text/javascript" src="table_view_action.js"></script>
+	<script type="text/javascript" src="./public/table_view_action.js"></script>
 </body>
 </html>
