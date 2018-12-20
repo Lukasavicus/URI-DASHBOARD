@@ -50,7 +50,7 @@
 				$submission_time = str_replace(' ', '', $data[5]->nodeValue);
 				$submission_date = $data[6]->nodeValue;
 
-				$SUBS["id"] = $prob_id;
+				$SUBS["id"] = trim($prob_id);
 				$SUBS["pos"] = $submission_position;
 				$SUBS["prog_lang"] = $submission_prog_lang;
 				$SUBS["time"] = $submission_time;

@@ -52,7 +52,7 @@
 
 					//$category  = array_search($category_text, $categories) - 1;
 
-					$PROB["id"] = $id;
+					$PROB["id"] = trim($id);
 					$PROB["name"] = $name;
 					$PROB["category"] = $category_text;
 					$PROB["solved"] = $solved_by_x_users;
