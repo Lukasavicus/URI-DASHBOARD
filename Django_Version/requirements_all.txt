@@ -68,7 +68,7 @@ pickleshare==0.7.4
 Pillow==3.1.2
 prompt-toolkit==1.0.9
 protobuf==3.4.0
-psutil==3.4.2
+psutil==5.6.6
 ptyprocess==0.5.1
 py==1.4.31
 pycurl==7.43.0
