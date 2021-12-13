@@ -43,7 +43,7 @@ jupyter-core==4.2.1
 Keras==2.0.8
 lazy-object-proxy==1.2.1
 logilab-common==1.1.0
-lxml==3.5.0
+lxml==4.6.5
 Markdown==2.6.9
 MarkupSafe==0.23
 matplotlib==1.5.3
